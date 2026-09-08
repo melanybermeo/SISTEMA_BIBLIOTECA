@@ -1,0 +1,277 @@
+[
+{
+  "model": "catalogo.genero",
+  "pk": 1,
+  "fields": {
+    "nombre": "Terror"
+  }
+},
+{
+  "model": "catalogo.genero",
+  "pk": 2,
+  "fields": {
+    "nombre": "Novela"
+  }
+},
+{
+  "model": "catalogo.genero",
+  "pk": 3,
+  "fields": {
+    "nombre": "Romance"
+  }
+},
+{
+  "model": "catalogo.genero",
+  "pk": 4,
+  "fields": {
+    "nombre": "Aventura"
+  }
+},
+{
+  "model": "catalogo.genero",
+  "pk": 5,
+  "fields": {
+    "nombre": "Ciencia ficciòn"
+  }
+},
+{
+  "model": "catalogo.genero",
+  "pk": 6,
+  "fields": {
+    "nombre": "Drama"
+  }
+},
+{
+  "model": "catalogo.autor",
+  "pk": 1,
+  "fields": {
+    "nombre": "Gabriela Martha",
+    "apellido": "Garcia muñez",
+    "fecha_nacimiento": "1927-06-03",
+    "fecha_fallecimiento": "2014-04-17",
+    "biografia": "Escritor y periodista colombiano, considerado uno de los principales representantes del realismo mágico. Recibió el Premio Nobel de Literatura en 1982."
+  }
+},
+{
+  "model": "catalogo.autor",
+  "pk": 2,
+  "fields": {
+    "nombre": "Isabel",
+    "apellido": "Allender",
+    "fecha_nacimiento": "1942-02-08",
+    "fecha_fallecimiento": null,
+    "biografia": "Escritora chilena reconocida por sus novelas de carácter histórico y familiar, combinando elementos de realidad y ficción."
+  }
+},
+{
+  "model": "catalogo.autor",
+  "pk": 3,
+  "fields": {
+    "nombre": "George",
+    "apellido": "Orwell",
+    "fecha_nacimiento": "1903-06-25",
+    "fecha_fallecimiento": "1950-01-21",
+    "biografia": "Escritor y periodista británico conocido por sus obras de crítica social y política, especialmente 1984 y Rebelión en la granja."
+  }
+},
+{
+  "model": "catalogo.autor",
+  "pk": 4,
+  "fields": {
+    "nombre": "Janes",
+    "apellido": "Austen",
+    "fecha_nacimiento": "1775-12-16",
+    "fecha_fallecimiento": "1817-07-18",
+    "biografia": "Escritora inglesa reconocida por sus novelas sobre la sociedad, las relaciones y el matrimonio en la Inglaterra de su época."
+  }
+},
+{
+  "model": "catalogo.autor",
+  "pk": 5,
+  "fields": {
+    "nombre": "Julio",
+    "apellido": "Cortàzar",
+    "fecha_nacimiento": "1914-08-26",
+    "fecha_fallecimiento": "1984-02-12",
+    "biografia": "Escritor argentino considerado una figura destacada de la literatura latinoamericana y del boom latinoamericano. Su obra más conocida es Rayuela."
+  }
+},
+{
+  "model": "catalogo.autor",
+  "pk": 6,
+  "fields": {
+    "nombre": "Miguel",
+    "apellido": "Cervantes",
+    "fecha_nacimiento": "1547-09-29",
+    "fecha_fallecimiento": "1616-04-22",
+    "biografia": "Escritor español considerado una de las figuras más importantes de la literatura en lengua española. Es conocido principalmente por Don Quijote de la Mancha."
+  }
+},
+{
+  "model": "catalogo.libro",
+  "pk": 1,
+  "fields": {
+    "titulo": "La casa de los espìritus",
+    "autor": 2,
+    "resumen": "Relata la historia de la familia Trueba a través de varias generaciones, combinando acontecimientos políticos, familiares y elementos sobrenaturales.",
+    "isbn": "978-840134243",
+    "idioma": "Español",
+    "precio": "20.00",
+    "imagen": "libros/Captura_de_pantalla_2026-09-08_170200.png",
+    "genero": [
+      1
+    ]
+  }
+},
+{
+  "model": "catalogo.libro",
+  "pk": 2,
+  "fields": {
+    "titulo": "Orgullo y prejuicio",
+    "autor": 4,
+    "resumen": "Elizabeth Bennet y Fitzwilliam Darcy deben superar sus prejuicios y diferencias sociales antes de reconocer sus sentimientos.",
+    "isbn": "978-014143951",
+    "idioma": "Español",
+    "precio": "16.00",
+    "imagen": "libros/Captura_de_pantalla_2026-09-08_170342.png",
+    "genero": [
+      3
+    ]
+  }
+},
+{
+  "model": "catalogo.libro",
+  "pk": 3,
+  "fields": {
+    "titulo": "Don Quijote de la Mancha",
+    "autor": 6,
+    "resumen": "Don Quijote emprende aventuras como caballero andante junto a su fiel compañero Sancho Panza, confundiendo muchas veces la realidad con su imaginación.",
+    "isbn": "978-842041214",
+    "idioma": "Español",
+    "precio": "22.00",
+    "imagen": "libros/Captura_de_pantalla_2026-09-08_170117.png",
+    "genero": [
+      4
+    ]
+  }
+},
+{
+  "model": "catalogo.libro",
+  "pk": 4,
+  "fields": {
+    "titulo": "Rayuela",
+    "autor": 5,
+    "resumen": "Novela experimental que sigue la vida de Horacio Oliveira y permite diferentes formas de lectura, explorando el amor, la existencia y la búsqueda personal.",
+    "isbn": "978-843760457",
+    "idioma": "Español",
+    "precio": "19.00",
+    "imagen": "libros/Captura_de_pantalla_2026-09-08_170413.png",
+    "genero": [
+      2
+    ]
+  }
+},
+{
+  "model": "catalogo.libro",
+  "pk": 5,
+  "fields": {
+    "titulo": "Cien años de soledad",
+    "autor": 1,
+    "resumen": "Narra la historia de varias generaciones de la familia Buendía en el pueblo ficticio de Macondo, donde realidad y elementos fantásticos se mezclan.",
+    "isbn": "978-843760494",
+    "idioma": "Español",
+    "precio": "18.00",
+    "imagen": "libros/Captura_de_pantalla_2026-09-08_165627.png",
+    "genero": [
+      6
+    ]
+  }
+},
+{
+  "model": "catalogo.libro",
+  "pk": 6,
+  "fields": {
+    "titulo": "La piedra encantada",
+    "autor": 3,
+    "resumen": "Winston Smith vive bajo un régimen totalitario que controla la sociedad y vigila constantemente a sus ciudadanos para descubir donde se encuentra la piedra y usarla contra su enemigo y utilizara su poder para recuperar a su princesa.",
+    "isbn": "978-045152493",
+    "idioma": "Español",
+    "precio": "29.00",
+    "imagen": "libros/Captura_de_pantalla_2026-09-08_170245.png",
+    "genero": [
+      5
+    ]
+  }
+},
+{
+  "model": "catalogo.ejemplarlibro",
+  "pk": "3dcbba1b-936c-4dc7-b76a-bbf521503ae8",
+  "fields": {
+    "libro": 4,
+    "fecha_adquisicion": "2025-02-20",
+    "fecha_devolucion": null,
+    "estado": "d"
+  }
+},
+{
+  "model": "catalogo.ejemplarlibro",
+  "pk": "48056428-f892-4481-a159-7f515ea45e56",
+  "fields": {
+    "libro": 5,
+    "fecha_adquisicion": "2025-01-10",
+    "fecha_devolucion": null,
+    "estado": "d"
+  }
+},
+{
+  "model": "catalogo.ejemplarlibro",
+  "pk": "7a3c91e4-2b65-4f08-9d71-63c845fa21b9",
+  "fields": {
+    "libro": 1,
+    "fecha_adquisicion": "2025-01-15",
+    "fecha_devolucion": "2026-09-20",
+    "estado": "d"
+  }
+},
+{
+  "model": "catalogo.ejemplarlibro",
+  "pk": "7c443398-109b-4896-affa-e4a587a32c0b",
+  "fields": {
+    "libro": 3,
+    "fecha_adquisicion": "2025-03-03",
+    "fecha_devolucion": "2026-09-25",
+    "estado": "d"
+  }
+},
+{
+  "model": "catalogo.ejemplarlibro",
+  "pk": "8419b3ee-58fc-432d-abe6-f7e28481bd55",
+  "fields": {
+    "libro": 2,
+    "fecha_adquisicion": "2025-02-12",
+    "fecha_devolucion": "2026-09-25",
+    "estado": "d"
+  }
+},
+{
+  "model": "catalogo.ejemplarlibro",
+  "pk": "eb3ff788-54f3-43d2-83f0-8fb9b47abe35",
+  "fields": {
+    "libro": 6,
+    "fecha_adquisicion": "2025-01-22",
+    "fecha_devolucion": null,
+    "estado": "d"
+  }
+},
+{
+  "model": "catalogo.prestamo",
+  "pk": 1,
+  "fields": {
+    "codigo": "c79b3eef-b2df-49a4-b903-cb8a236d47b5",
+    "ejemplar": "48056428-f892-4481-a159-7f515ea45e56",
+    "nombre_solicitante": "Melanie Bermeo",
+    "correo_solicitante": "mbermeo55@gmail.com",
+    "fecha_solicitud": "2026-09-08T21:58:13.230Z"
+  }
+}
+]

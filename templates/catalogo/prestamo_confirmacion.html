@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}Solicitud confirmada{% endblock %}
+
+{% block content %}
+<div class="max-w-lg mx-auto px-4 py-10">
+  <div class="bg-white shadow-lg rounded-lg overflow-hidden border-2 border-dashed border-indigo-300">
+    <div class="bg-green-500 px-6 py-5 text-white text-center">
+      <svg class="mx-auto h-10 w-10 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+      </svg>
+      <h1 class="text-xl font-bold">¡Solicitud registrada correctamente!</h1>
+    </div>
+
+    <div class="p-6 space-y-4">
+      <p class="text-gray-700">
+        Hemos registrado tu solicitud. Te enviaremos el libro a tu correo, o puedes acercarte en físico presentando este código:
+      </p>
+
+      <div class="bg-gray-50 border border-gray-200 rounded-md p-4 text-center">
+        <p class="text-xs text-gray-500 uppercase tracking-wide">Código de retiro</p>
+        <p class="text-2xl font-mono font-bold text-indigo-700 mt-1">{{ prestamo.codigo }}</p>
+      </div>
+
+      <dl class="divide-y divide-gray-100 text-sm">
+        <div class="flex justify-between py-2">
+          <dt class="text-gray-500">Libro</dt>
+          <dd class="font-medium text-gray-800">{{ prestamo.ejemplar.libro.titulo }}</dd>
+        </div>
+        <div class="flex justify-between py-2">
+          <dt class="text-gray-500">Solicitante</dt>
+          <dd class="font-medium text-gray-800">{{ prestamo.nombre_solicitante }}</dd>
+        </div>
+        <div class="flex justify-between py-2">
+          <dt class="text-gray-500">Correo</dt>
+          <dd class="font-medium text-gray-800">{{ prestamo.correo_solicitante }}</dd>
+        </div>
+        <div class="flex justify-between py-2">
+          <dt class="text-gray-500">Fecha de solicitud</dt>
+          <dd class="font-medium text-gray-800">{{ prestamo.fecha_solicitud }}</dd>
+        </div>
+      </dl>
+
+      <div class="pt-4 text-center">
+        <a href="{% url 'libros' %}" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
+          Volver al catálogo
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

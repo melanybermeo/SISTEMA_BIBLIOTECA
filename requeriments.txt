@@ -1,0 +1,8 @@
+Django==5.2.1
+asgiref==3.8.1
+sqlparse==0.5.3
+tzdata==2025.2
+django-browser-reload==1.18.0
+django-tailwind==4.0.1
+pillow==11.1.0
+typing_extensions==4.13.2

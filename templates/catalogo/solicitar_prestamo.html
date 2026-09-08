@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}Solicitar préstamo - {{ libro.titulo }}{% endblock %}
+
+{% block content %}
+<div class="max-w-lg mx-auto px-4 py-10">
+  <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+    <div class="bg-indigo-600 px-6 py-6 text-white">
+      <h1 class="text-2xl font-bold">Solicitar préstamo</h1>
+      <p class="mt-1 text-indigo-100">{{ libro.titulo }} - {{ libro.autor }}</p>
+    </div>
+
+    <form method="post" class="p-6 space-y-4">
+      {% csrf_token %}
+      {% for field in form %}
+      <div>
+        <label class="block text-sm font-medium text-gray-700 mb-1">{{ field.label }}</label>
+        {{ field }}
+        {% if field.errors %}
+        <p class="text-sm text-red-600 mt-1">{{ field.errors.0 }}</p>
+        {% endif %}
+      </div>
+      {% endfor %}
+
+      <div class="flex items-center justify-between pt-4">
+        <a href="{% url 'libro-detail' libro.pk %}" class="text-gray-600 hover:text-gray-900">Cancelar</a>
+        <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
+          Confirmar solicitud
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
